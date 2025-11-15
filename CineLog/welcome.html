@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CineLog — Главная</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Inter", sans-serif;
+        background-color: #f7f9fb;
+        color: #1a2c44;
+        display: flex;
+      }
+      .sidebar {
+        width: 220px;
+        background-color: #f0f4f9;
+        padding: 40px 20px;
+        height: 100vh;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.03);
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+      .sidebar .logo {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 40px;
+        color: #3b5a83;
+      }
+      .sidebar nav a {
+        display: block;
+        margin-bottom: 18px;
+        color: #3b5a83;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.2s;
+      }
+      .sidebar nav a:hover {
+        color: #2f4867;
+      }
+      .main-content {
+        margin-left: 240px;
+        padding: 40px;
+        flex: 1;
+      }
+      .feed-title {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 30px;
+      }
+      .feed-item {
+        display: flex;
+        background-color: #ffffff;
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 30px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        position: relative;
+      }
+      .feed-poster {
+        width: 160px;
+        height: 240px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 8px;
+        margin-right: 24px;
+        flex-shrink: 0;
+      }
+      .feed-info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      .feed-info h2 {
+        font-size: 20px;
+        margin: 0 0 8px;
+      }
+      .feed-info p {
+        font-size: 14px;
+        color: #677b91;
+        margin-bottom: 8px;
+      }
+      .stats {
+        font-size: 13px;
+        color: #3b5a83;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 8px;
+      }
+      .star-rating {
+        color: #fdcb5a;
+        font-weight: bold;
+      }
+      .watch-count {
+        background-color: #e7f0ff;
+        color: #3b5a83;
+        padding: 4px 10px;
+        border-radius: 20px;
+        font-weight: 500;
+        font-size: 13px;
+      }
+      .dropdown {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        text-align: right;
+      }
+      .dropdown-toggle {
+        background: none;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+        color: #677b91;
+      }
+      .dropdown-menu {
+        display: none;
+        background: #fff;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        margin-top: 4px;
+        text-align: left;
+      }
+      .dropdown-menu button {
+        background: none;
+        border: none;
+        padding: 10px 20px;
+        width: 100%;
+        text-align: left;
+        cursor: pointer;
+        font-size: 14px;
+        color: #1a2c44;
+      }
+      .dropdown-menu button:hover {
+        background-color: #eef3fa;
+      }
+      .dropdown:hover .dropdown-menu {
+        display: block;
+      }
+      .category-label {
+        font-size: 13px;
+        font-weight: 500;
+        color: #3b5a83;
+        margin-bottom: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="logo">CineLog</div>
+      <nav>
+        <a href="#">📚 Моя библиотека</a>
+        <a href="#">📂 Категории</a>
+        <a href="#">💬 Комментарии</a>
+        <a href="#">📈 Статистика</a>
+        <a href="#">⚙️ Настройки</a>
+        <a href="logout.php">📖 Выйти</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <h1 class="feed-title">Лента активности</h1>
+
+      <!-- 1. Интерстеллар -->
+      <div class="feed-item">
+        <div class="dropdown">
+          <div class="category-label"></div>
+          <button class="dropdown-toggle">⋮</button>
+          <div class="dropdown-menu">
+            <button>Смотрю</button>
+            <button>Просмотрено</button>
+            <button>Брошено</button>
+            <button>В планах</button>
+            <button>Без статуса</button>
+          </div>
+        </div>
+        <div
+          class="feed-poster"
+          style="
+            background-image: url('https://i.pinimg.com/736x/8e/0d/ab/8e0dab8699be85720ce55845065bf6dc.jpg');
+          "
+        ></div>
+        <div class="feed-info">
+          <h2>Интерстеллар</h2>
+          <p>2014 • Фантастика, драма, приключения.</p>
+          <p>
+            Фантастическая драма Кристофера Нолана, в которой человечество стоит
+            на грани вымирания. Бывший пилот НАСА Купер отправляется в
+            межзвёздную экспедицию через червоточину, чтобы найти новую планету
+            для жизни. Фильм сочетает масштабные научные идеи, трогательную
+            семейную драму и ошеломляющие сцены. Главная тема — любовь и время
+            как силы, преодолевающие пространство. Музыка Ханса Циммера делает
+            каждую сцену незабываемой.
+          </p>
+          <div class="stats">
+            <div class="watch-count">1 230 посмотрели</div>
+            <div class="star-rating">4.9 ★</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Паразиты -->
+      <div class="feed-item">
+        <div class="dropdown">
+          <div class="category-label"></div>
+          <button class="dropdown-toggle">⋮</button>
+          <div class="dropdown-menu">
+            <button>Смотрю</button>
+            <button>Просмотрено</button>
+            <button>Брошено</button>
+            <button>В планах</button>
+            <button>Без статуса</button>
+          </div>
+        </div>
+        <div
+          class="feed-poster"
+          style="
+            background-image: url('https://im.haberturk.com/movies/movie/4/parazit-496243.jpg?ver=1709100496');
+          "
+        ></div>
+        <div class="feed-info">
+          <h2>Паразиты</h2>
+          <p>2019 • Триллер, драма.</p>
+          <p>
+            Оскароносный фильм Пон Чжун Хо о бедной семье, внедряющейся в жизнь
+            богатой. Фильм блестяще раскрывает классовое неравенство, социальное
+            напряжение и скрытые мотивы персонажей, переходя от иронии к
+            настоящему ужасу. Это тревожное, блестяще поставленное и
+            запоминающееся кино, которое заставляет задуматься над сутью
+            современного общества.
+          </p>
+          <div class="stats">
+            <div class="watch-count">2 580 посмотрели</div>
+            <div class="star-rating">4.5 ★</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Чёрное зеркало -->
+      <div class="feed-item">
+        <div class="dropdown">
+          <div class="category-label"></div>
+          <button class="dropdown-toggle">⋮</button>
+          <div class="dropdown-menu">
+            <button>Смотрю</button>
+            <button>Просмотрено</button>
+            <button>Брошено</button>
+            <button>В планах</button>
+            <button>Без статуса</button>
+          </div>
+        </div>
+        <div
+          class="feed-poster"
+          style="
+            background-image: url('https://static.kinoafisha.info/k/series_posters/1920x1080/upload/series/posters/8/3/2/238/114518061595441603.jpg');
+          "
+        ></div>
+        <div class="feed-info">
+          <h2>Чёрное зеркало</h2>
+          <p>2011–2019 • Антология, фантастика.</p>
+          <p>
+            Сериал-антиутопия, каждая серия которого исследует последствия
+            технологий. От соцсетей и ИИ до сознания и виртуальной реальности.
+            Мрачный, провокационный и умный сериал, ставший настоящим культурным
+            феноменом. Его серии заставляют задуматься, пугают и порой слишком
+            близки к нашей реальности.
+          </p>
+          <div class="stats">
+            <div class="watch-count">4 040 посмотрели</div>
+            <div class="star-rating">5.0 ★</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      document.querySelectorAll(".dropdown-menu button").forEach((btn) => {
+        btn.addEventListener("click", function () {
+          const dropdown = this.closest(".dropdown");
+          const label = dropdown.querySelector(".category-label");
+          const menu = dropdown.querySelector(".dropdown-menu");
+
+          // обновляем статус
+          if (this.textContent === "Без статуса") {
+            label.textContent = "";
+            label.style.display = "none";
+          } else {
+            label.textContent = this.textContent;
+            label.style.display = "";
+          }
+
+          // прячем меню сразу после клика
+          menu.style.display = "none";
+        });
+      });
+
+      // чтобы при следующем ховере меню снова показывалось
+      document.querySelectorAll(".dropdown").forEach((dd) => {
+        dd.addEventListener("mouseenter", function () {
+          this.querySelector(".dropdown-menu").style.display = "";
+        });
+      });
+    </script>
+  </body>
+</html>

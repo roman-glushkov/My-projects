@@ -1,0 +1,37 @@
+{
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "@typescript-eslint/eslint-plugin": "^8.46.2",
+    "@typescript-eslint/parser": "^8.46.2",
+    "@vitejs/plugin-react": "^5.1.0",
+    "eslint": "^9.39.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "prettier": "^3.6.2",
+    "stylelint": "^16.25.0",
+    "stylelint-config-standard": "^39.0.1",
+    "stylelint-order": "^7.0.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.12"
+  },
+  "scripts": {
+    "type-check": "tsc --noEmit",
+    "lint:js": "eslint src/**/*.{ts,tsx}",
+    "lint:js:fix": "eslint src/**/*.{ts,tsx} --fix",
+    "lint:css": "stylelint src/**/*.css",
+    "lint:css:fix": "stylelint src/**/*.css --fix",
+    "format:check": "prettier --check src/**/*.{ts,tsx,css}",
+    "format:fix": "prettier --write src/**/*.{ts,tsx,css}",
+    "lint": "npm run type-check && npm run lint:js && npm run lint:css && npm run format:check",
+    "lint:fix": "npm run type-check && npm run lint:js:fix && npm run lint:css:fix && npm run format:fix",
+    "test:integration": "npm run lint",
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  }
+}

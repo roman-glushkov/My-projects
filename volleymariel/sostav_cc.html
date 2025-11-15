@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Состав команды - Первая лига России по волейболу | Спортивные Сооружения
+    </title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      /* Основные стили */
+      :root {
+        --color-primary: #0d1b2a;
+        --color-accent: #e63946;
+        --color-secondary: #3a86ff;
+        --color-light: #f8f9fa;
+        --color-white: #ffffff;
+        --color-bg: #f5f7fa;
+        --gradient-primary: linear-gradient(
+          135deg,
+          var(--color-primary) 0%,
+          #1b3a5f 100%
+        );
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: var(--color-primary);
+        background: var(--color-bg);
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+      }
+
+      /* Шапка */
+      .site-header {
+        background-color: var(--color-primary);
+        color: var(--color-white);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .header-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+      }
+
+      .logo img {
+        height: 50px;
+        transition: all 0.3s ease;
+      }
+
+      .logo:hover img {
+        transform: scale(1.05);
+      }
+
+      .main-nav ul {
+        display: flex;
+        gap: 30px;
+      }
+
+      .main-nav a {
+        color: var(--color-white);
+        font-weight: 600;
+        font-size: 1.05rem;
+        position: relative;
+        padding: 5px 0;
+      }
+
+      .main-nav a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--color-accent);
+        transition: width 0.3s ease;
+      }
+
+      .main-nav a:hover::after {
+        width: 100%;
+      }
+
+      .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        color: var(--color-white);
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+
+      /* Hero Section */
+      .team-hero {
+        background: url("https://images.unsplash.com/photo-1547347298-4074fc3086f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80")
+          center/cover;
+        padding: 180px 0 100px;
+        color: var(--color-white);
+        text-align: center;
+        position: relative;
+        margin-top: 80px;
+      }
+
+      .team-hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--gradient-primary);
+        opacity: 0.92;
+        z-index: 1;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .team-hero h1 {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+      }
+
+      .team-hero p {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* Позиции игроков */
+      .position-section {
+        padding: 80px 0;
+      }
+
+      .position-header {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      .position-title {
+        font-size: 2.5rem;
+        color: var(--color-primary);
+        margin-bottom: 15px;
+        display: inline-block;
+        padding-bottom: 10px;
+        border-bottom: 3px solid var(--color-accent);
+      }
+
+      .position-description {
+        max-width: 700px;
+        margin: 0 auto;
+        color: #555;
+        font-size: 1.1rem;
+      }
+
+      .players-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 30px;
+      }
+
+      .player-card {
+        background: var(--color-white);
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        text-align: center;
+      }
+
+      .player-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      .player-photo {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+      }
+
+      .player-info {
+        padding: 20px;
+      }
+
+      .player-name {
+        font-size: 1.3rem;
+        color: var(--color-primary);
+        margin-bottom: 5px;
+        font-weight: 600;
+      }
+
+      .player-position {
+        color: var(--color-accent);
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      .player-number {
+        display: inline-block;
+        background: var(--color-secondary);
+        color: var(--color-white);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        line-height: 40px;
+        font-weight: bold;
+        margin-top: 5px;
+      }
+
+      /* Тренерский штаб */
+      .coaches-section {
+        padding: 80px 0;
+        background: var(--color-light);
+      }
+
+      .coaches-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 30px;
+      }
+
+      .coach-card {
+        background: var(--color-white);
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+      }
+
+      .coach-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      .coach-photo {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+      }
+
+      .coach-info {
+        padding: 20px;
+        text-align: center;
+      }
+
+      .coach-name {
+        font-size: 1.4rem;
+        color: var(--color-primary);
+        margin-bottom: 5px;
+      }
+
+      .coach-role {
+        color: var(--color-secondary);
+        font-weight: 600;
+      }
+
+      /* Footer */
+      .site-footer {
+        background-color: var(--color-primary);
+        color: var(--color-white);
+        padding: 60px 0 0;
+      }
+
+      .footer-inner {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 40px;
+      }
+
+      .footer-col h4 {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 10px;
+      }
+
+      .footer-col h4::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50px;
+        height: 2px;
+        background: var(--color-accent);
+      }
+
+      .footer-col p {
+        margin-bottom: 15px;
+        color: #ccc;
+      }
+
+      .footer-links li {
+        margin-bottom: 12px;
+      }
+
+      .footer-links a {
+        color: #ccc;
+        display: flex;
+        align-items: center;
+      }
+
+      .footer-links a:hover {
+        color: var(--color-white);
+        transform: translateX(5px);
+      }
+
+      .footer-links a i {
+        margin-right: 10px;
+        color: var(--color-accent);
+      }
+
+      .social-links {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+      }
+
+      .social-links a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+        color: var(--color-white);
+        transition: all 0.3s ease;
+      }
+
+      .social-links a:hover {
+        background: var(--color-accent);
+        transform: translateY(-5px);
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding: 20px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        color: #aaa;
+        font-size: 0.9rem;
+      }
+
+      /* Адаптивность */
+      @media (max-width: 992px) {
+        .team-hero {
+          padding: 150px 0 80px;
+        }
+
+        .team-hero h1 {
+          font-size: 3rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .mobile-menu-btn {
+          display: block;
+        }
+
+        .main-nav {
+          position: fixed;
+          top: 80px;
+          left: 0;
+          width: 100%;
+          background: var(--color-primary);
+          padding: 20px;
+          transform: translateY(-150%);
+          transition: transform 0.4s ease;
+          box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-nav.active {
+          transform: translateY(0);
+        }
+
+        .main-nav ul {
+          flex-direction: column;
+          gap: 15px;
+        }
+
+        .team-hero {
+          padding: 130px 0 60px;
+        }
+
+        .team-hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .team-hero p {
+          font-size: 1.2rem;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .team-hero h1 {
+          font-size: 2rem;
+        }
+
+        .position-title {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo">
+          <img src="static/images/uss.png" alt="Спортивные Сооружения" />
+        </a>
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="#about">О команде</a></li>
+            <li><a href="#schedule">Расписание</a></li>
+            <li><a href="#news">Новости</a></li>
+            <li><a href="#gallery">Галерея</a></li>
+            <li><a href="#facilities">Сооружения</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="team-hero">
+      <div class="hero-content">
+        <h1>Команда "Спортивные Сооружения"</h1>
+        <p>
+          Профессиональная команда, представляющая Республику Марий Эл в Первой
+          лиге России
+        </p>
+        <a
+          href="#roster"
+          class="btn"
+          style="
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+            border: none;
+            font-size: 1rem;
+            background-color: var(--color-accent);
+            color: var(--color-white);
+          "
+          >Смотреть состав</a
+        >
+      </div>
+    </section>
+
+    <!-- Состав команды -->
+    <section id="roster" class="position-section">
+      <div class="container">
+        <!-- Связующие -->
+        <div class="position-group">
+          <div class="position-header">
+            <h2 class="position-title">Связующие</h2>
+            <p class="position-description">
+              Игроки, отвечающие за организацию атаки и распределение передач
+            </p>
+          </div>
+
+          <div class="players-grid">
+            <a href="player1.html" class="player-card">
+              <img
+                src="https://images.unsplash.com/photo-1560272564-c83ee6d4f736?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Игрок 1"
+                class="player-photo"
+              />
+              <div class="player-info">
+                <div class="player-name">Семён Нагайцев</div>
+                <div class="player-position">Связующий</div>
+                <div class="player-number">7</div>
+              </div>
+            </a>
+
+            <a href="player2.html" class="player-card">
+              <img
+                src="https://images.unsplash.com/photo-1511882150382-421056c89033?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Игрок 2"
+                class="player-photo"
+              />
+              <div class="player-info">
+                <div class="player-name">Алексей Петров</div>
+                <div class="player-position">Связующий</div>
+                <div class="player-number">12</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Доигровщики -->
+        <div class="position-group">
+          <div class="position-header">
+            <h2 class="position-title">Доигровщики</h2>
+            <p class="position-description">
+              Универсальные игроки, атакующие с края сетки и принимающие подачи
+            </p>
+          </div>
+
+          <div class="players-grid">
+            <a href="player3.html" class="player-card">
+              <img
+                src="https://images.unsplash.com/photo-1592656094267-764a45160876?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Игрок 3"
+                class="player-photo"
+              />
+              <div class="player-info">
+                <div class="player-name">Павел Фадеев</div>
+                <div class="player-position">Доигровщик</div>
+                <div class="player-number">10</div>
+              </div>
+            </a>
+
+            <a href="player4.html" class="player-card">
+              <img
+                src="https://images.unsplash.com/photo-1547981609-4b6bf67cd1a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Игрок 4"
+                class="player-photo"
+              />
+              <div class="player-info">
+                <div class="player-name">Дмитрий Соколов</div>
+                <div class="player-position">Доигровщик</div>
+                <div class="player-number">15</div>
+              </div>
+            </a>
+
+            <a href="player5.html" class="player-card">
+              <img
+                src="https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Игрок 5"
+                class="player-photo"
+              />
+              <div class="player-info">
+                <div class="player-name">Максим Иванов</div>
+                <div class="player-position">Доигровщик</div>
+                <div class="player-number">8</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Диагональные -->
+        <div class="position-group">
+          <div class="position-header">
+            <h2 class="position-title">Диагональные</h2>
+            <p class="position-description">
+              Основные нападающие команды, атакующие со второй линии
+            </p>
+          </div>
+
+          <div class="players-grid">
+            <a href="player6.html" class="player-card">
+              <img
+                src="https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Игрок 6"
+                class="player-photo"
+              />
+              <div class="player-info">
+                <div class="player-name">Андрей Кузнецов</div>
+                <div class="player-position">Диагональный</div>
+                <div class="player-number">9</div>
+              </div>
+            </a>
+
+            <a href="player7.html" class="player-card">
+              <img
+                src="https://images.unsplash.com/photo-1511882150382-421056c89033?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Игрок 7"
+                class="player-photo"
+              />
+              <div class="player-info">
+                <div class="player-name">Артём Морозов</div>
+                <div class="player-position">Диагональный</div>
+                <div class="player-number">18</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Центральные блокирующие -->
+        <div class="position-group">
+          <div class="position-header">
+            <h2 class="position-title">Центральные блокирующие</h2>
+            <p class="position-description">
+              Высокие игроки, специализирующиеся на блоке и быстрых атаках
+            </p>
+          </div>
+
+          <div class="players-grid">
+            <a href="player8.html" class="player-card">
+              <img
+                src="https://images.unsplash.com/photo-1560272564-c83ee6d4f736?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Игрок 8"
+                class="player-photo"
+              />
+              <div class="player-info">
+                <div class="player-name">Кирилл Калякин</div>
+                <div class="player-position">Центральный блокирующий</div>
+                <div class="player-number">5</div>
+              </div>
+            </a>
+
+            <a href="player9.html" class="player-card">
+              <img
+                src="https://images.unsplash.com/photo-1592656094267-764a45160876?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Игрок 9"
+                class="player-photo"
+              />
+              <div class="player-info">
+                <div class="player-name">Илья Волков</div>
+                <div class="player-position">Центральный блокирующий</div>
+                <div class="player-number">13</div>
+              </div>
+            </a>
+
+            <a href="player10.html" class="player-card">
+              <img
+                src="https://images.unsplash.com/photo-1547981609-4b6bf67cd1a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Игрок 10"
+                class="player-photo"
+              />
+              <div class="player-info">
+                <div class="player-name">Никита Белов</div>
+                <div class="player-position">Центральный блокирующий</div>
+                <div class="player-number">3</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Либеро -->
+        <div class="position-group">
+          <div class="position-header">
+            <h2 class="position-title">Либеро</h2>
+            <p class="position-description">
+              Специалисты по приёму подач и защите
+            </p>
+          </div>
+
+          <div class="players-grid">
+            <a href="kirill-ivanov.html" class="player-card">
+              <img
+                src="static/images/ivanov_k (3).jpg"
+                alt="Кирилл Иванов"
+                class="player-photo"
+              />
+              <div class="player-info">
+                <div class="player-name">Кирилл Иванов</div>
+                <div class="player-position">Либеро</div>
+                <div class="player-number">19</div>
+              </div>
+            </a>
+
+            <a href="player11.html" class="player-card">
+              <img
+                src="https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Игрок 11"
+                class="player-photo"
+              />
+              <div class="player-info">
+                <div class="player-name">Егор Есменеев</div>
+                <div class="player-position">Либеро</div>
+                <div class="player-number">1</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Тренерский штаб -->
+    <section class="coaches-section">
+      <div class="container">
+        <div class="position-header">
+          <h2 class="position-title">Тренерский штаб</h2>
+          <p class="position-description">
+            Профессионалы, ведущие команду к победам
+          </p>
+        </div>
+
+        <div class="coaches-grid">
+          <div class="coach-card">
+            <img
+              src="https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Главный тренер"
+              class="coach-photo"
+            />
+            <div class="coach-info">
+              <div class="coach-name">Евгений Голомысов</div>
+              <div class="coach-role">Главный тренер</div>
+            </div>
+          </div>
+
+          <div class="coach-card">
+            <img
+              src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Тренер"
+              class="coach-photo"
+            />
+            <div class="coach-info">
+              <div class="coach-name">Денис Николаев</div>
+              <div class="coach-role">Тренер</div>
+            </div>
+          </div>
+
+          <div class="coach-card">
+            <img
+              src="https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Тренер"
+              class="coach-photo"
+            />
+            <div class="coach-info">
+              <div class="coach-name">Андрей Сидоркин</div>
+              <div class="coach-role">Руководитель команды</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-col">
+            <a href="index.html" class="logo">
+              <img src="static/images/uss.png" alt="Спортивные Сооружения" />
+            </a>
+            <p>
+              Волейбольная команда "Спортивные Сооружения" - профессиональная
+              команда, выступающая в Первой лиге России.
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-vk"></i></a>
+              <a href="#"><i class="fab fa-telegram"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Контакты</h4>
+            <p><i class="fas fa-phone"></i> +7 (987) 721-03-71</p>
+            <p><i class="fas fa-envelope"></i> info@sports-facilities.ru</p>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> Йошкар-Ола, Республика Марий
+              Эл
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4>Быстрые ссылки</h4>
+            <ul class="footer-links">
+              <li>
+                <a href="index.html"
+                  ><i class="fas fa-chevron-right"></i> Главная</a
+                >
+              </li>
+              <li>
+                <a href="#roster"
+                  ><i class="fas fa-chevron-right"></i> Состав команды</a
+                >
+              </li>
+              <li>
+                <a href="#schedule"
+                  ><i class="fas fa-chevron-right"></i> Расписание матчей</a
+                >
+              </li>
+              <li>
+                <a href="#news"><i class="fas fa-chevron-right"></i> Новости</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          &copy; 2025 Спортивные Сооружения. Официальный сайт команды. Все права
+          защищены.
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Мобильное меню
+      const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+      const mainNav = document.querySelector(".main-nav");
+
+      mobileMenuBtn.addEventListener("click", () => {
+        mainNav.classList.toggle("active");
+        const icon = mobileMenuBtn.querySelector("i");
+        if (mainNav.classList.contains("active")) {
+          icon.classList.remove("fa-bars");
+          icon.classList.add("fa-times");
+        } else {
+          icon.classList.remove("fa-times");
+          icon.classList.add("fa-bars");
+        }
+      });
+
+      // Плавная прокрутка
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 80,
+              behavior: "smooth",
+            });
+
+            if (mainNav.classList.contains("active")) {
+              mainNav.classList.remove("active");
+              const icon = mobileMenuBtn.querySelector("i");
+              icon.classList.remove("fa-times");
+              icon.classList.add("fa-bars");
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

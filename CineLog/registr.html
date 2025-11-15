@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CineLog — Регистрация</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="static/style/register_style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar">
+        <div class="logo">CineLog</div>
+        <div class="nav-links">
+          <a href="#" class="nav-link active">Регистрация</a>
+        </div>
+      </nav>
+
+      <div class="registration-container">
+        <!-- Левая колонка - Преимущества -->
+        <div class="benefits-section">
+          <h2 class="section-title">Почему CineLog?</h2>
+
+          <div class="benefit-item">
+            <svg
+              class="benefit-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+            >
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+            </svg>
+            <div class="benefit-content">
+              <h3>Умная статистика</h3>
+              <p>Анализируйте свои предпочтения: жанры, режиссеры, актеры</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <svg
+              class="benefit-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+            <div class="benefit-content">
+              <h3>Персональные рекомендации</h3>
+              <p>Система предлагает контент на основе ваших оценок</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <svg
+              class="benefit-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+            >
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+            <div class="benefit-content">
+              <h3>Сообщество единомышленников</h3>
+              <p>Обсуждайте кино с людьми со схожими вкусами</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <svg
+              class="benefit-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+            >
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+            <div class="benefit-content">
+              <h3>Добавляйте любые произведения</h3>
+              <p>
+                Не нашли фильм, аниме или книгу? Добавьте вручную через
+                специальную форму
+              </p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <svg
+              class="benefit-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+            >
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+            </svg>
+            <div class="benefit-content">
+              <h3>Никакой рекламы</h3>
+              <p>Чистый интерфейс без баннеров и навязчивых предложений</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Центральная колонка - Форма регистрации -->
+        <div class="auth-card">
+          <h1 class="auth-title">Создайте аккаунт</h1>
+          <p class="auth-subtitle">
+            Начните вести свой кино-дневник уже сегодня
+          </p>
+
+          <form class="auth-form">
+            <div class="form-group">
+              <label for="username" class="form-label">Имя пользователя</label>
+              <input
+                type="text"
+                id="username"
+                class="form-input"
+                placeholder="Придумайте никнейм"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                id="email"
+                class="form-input"
+                placeholder="your@email.com"
+                required
+              />
+              <!-- Блок для ошибки -->
+              <div class="error-message" id="email-error"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="password" class="form-label">Пароль</label>
+              <input
+                type="password"
+                id="password"
+                class="form-input"
+                placeholder="••••••••"
+                required
+              />
+              <div class="error-message" id="password-error"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="confirm-password" class="form-label"
+                >Подтвердите пароль</label
+              >
+              <input
+                type="password"
+                id="confirm-password"
+                class="form-input"
+                placeholder="••••••••"
+                required
+              />
+              <div class="error-message" id="confirm-error"></div>
+            </div>
+
+            <button type="submit" class="primary-btn">
+              Зарегистрироваться
+            </button>
+
+            <div class="divider">
+              <span>или</span>
+            </div>
+
+            <div class="social-auth">
+              <button type="button" class="social-btn google-btn">
+                <svg
+                  class="social-icon"
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                >
+                  <path
+                    d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                    fill="#4285F4"
+                  ></path>
+                  <path
+                    d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                    fill="#34A853"
+                  ></path>
+                  <path
+                    d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                    fill="#FBBC05"
+                  ></path>
+                  <path
+                    d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                    fill="#EA4335"
+                  ></path>
+                </svg>
+                Продолжить с Google
+              </button>
+              <button type="button" class="social-btn facebook-btn">
+                <svg
+                  class="social-icon"
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                >
+                  <path
+                    d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"
+                    fill="#1877F2"
+                  ></path>
+                </svg>
+                Продолжить с Facebook
+              </button>
+            </div>
+          </form>
+
+          <div class="auth-footer">
+            Уже есть аккаунт?
+            <a href="login.html" class="auth-link">Войти</a>
+          </div>
+        </div>
+
+        <!-- Правая колонка - Последние рецензии -->
+        <div class="reviews-section">
+          <h2 class="section-title">Свежие рецензии</h2>
+
+          <div class="reviews-container">
+            <!-- Рецензия 1 -->
+            <div class="review-card">
+              <div class="review-header">
+                <div
+                  class="review-cover"
+                  style="
+                    background-image: url('https://static.kinoafisha.info/k/series_posters/1920x1080/upload/series/posters/6/4/1/146/705144771595441472.jpg');
+                  "
+                ></div>
+                <div class="review-meta">
+                  <div class="review-title">Во все тяжкие</div>
+                  <div class="review-rating">★★★★★</div>
+                  <div class="review-date">15.06.2024</div>
+                </div>
+              </div>
+              <div class="review-text">
+                "С каждым просмотром открываю новые слои характера Уолтера
+                Уайта. Винс Гиллиган создал не просто сериал, а современную
+                трагедию в лучших традициях Шекспира."
+              </div>
+            </div>
+
+            <!-- Рецензия 2 -->
+            <div class="review-card">
+              <div class="review-header">
+                <div
+                  class="review-cover"
+                  style="
+                    background-image: url('https://i.pinimg.com/originals/c2/21/47/c221470867f6057ff6c25d78a8ee87aa.jpg');
+                  "
+                ></div>
+                <div class="review-meta">
+                  <div class="review-title">Атака титанов</div>
+                  <div class="review-rating">★★★★☆</div>
+                  <div class="review-date">12.06.2024</div>
+                </div>
+              </div>
+              <div class="review-text">
+                "Финал вызвал бурные дискуссии, но нельзя отрицать - это один из
+                самых амбициозных аниме-проектов десятилетия. Музыка, анимация и
+                сюжетные повороты на высоте."
+              </div>
+            </div>
+
+            <!-- Рецензия 3 -->
+            <div class="review-card">
+              <div class="review-header">
+                <div
+                  class="review-cover"
+                  style="
+                    background-image: url('https://static.kinoafisha.info/k/series_posters/1920x1080/upload/series/posters/8/3/2/238/114518061595441603.jpg');
+                  "
+                ></div>
+                <div class="review-meta">
+                  <div class="review-title">Черное зеркало</div>
+                  <div class="review-rating">★★★★★</div>
+                  <div class="review-date">10.06.2024</div>
+                </div>
+              </div>
+              <div class="review-text">
+                "Эпизод 'San Junipero' - настоящее произведение искусства.
+                Редкий случай, когда антиутопия оставляет теплое чувство
+                надежды. Лучшая работа сериала на сегодня."
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- в конце body, сразу перед </body> -->
+    <!-- Поместите этот блок прямо перед закрывающим </body> -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const form = document.querySelector(".auth-form");
+        const username = document.getElementById("username");
+        const emailInput = document.getElementById("email");
+        const pwdInput = document.getElementById("password");
+        const confInput = document.getElementById("confirm-password");
+
+        const userErrEl = document.getElementById("username-error");
+        const emailErrEl = document.getElementById("email-error");
+        const pwdErrEl = document.getElementById("password-error");
+        const confErrEl = document.getElementById("confirm-error");
+
+        form.addEventListener("submit", async (e) => {
+          e.preventDefault();
+
+          // 1) Сброс всех ошибок и стилей
+          [userErrEl, emailErrEl, pwdErrEl, confErrEl].forEach((el) => {
+            if (el) {
+              el.textContent = "";
+              el.classList.remove("active");
+            }
+          });
+          [username, emailInput, pwdInput, confInput].forEach((inp) => {
+            inp.classList.remove("input-error");
+          });
+
+          let valid = true;
+
+          // 2) Username — не пустое
+          if (!username.value.trim()) {
+            userErrEl.textContent = "Пожалуйста, введите имя пользователя";
+            userErrEl.classList.add("active");
+            username.classList.add("input-error");
+            valid = false;
+          }
+
+          // 3) Email — встроенная HTML5-валидация
+          if (!emailInput.checkValidity()) {
+            emailErrEl.textContent = "Введён некорректный email";
+            emailErrEl.classList.add("active");
+            emailInput.classList.add("input-error");
+            valid = false;
+          }
+
+          // 4) Пароль — минимум 6 символов
+          if (pwdInput.value.length < 6) {
+            pwdErrEl.textContent = "Пароль должен содержать минимум 6 символов";
+            pwdErrEl.classList.add("active");
+            pwdInput.classList.add("input-error");
+            valid = false;
+          }
+
+          // 5) Подтверждение пароля
+          if (pwdInput.value !== confInput.value) {
+            confErrEl.textContent = "Пароли не совпадают";
+            confErrEl.classList.add("active");
+            confInput.classList.add("input-error");
+            valid = false;
+          }
+
+          if (!valid) {
+            return; // если есть ошибки — не отправляем форму
+          }
+
+          // 6) Отправка на сервер
+          try {
+            const resp = await fetch("register.php", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                username: username.value.trim(),
+                email: emailInput.value.trim(),
+                password: pwdInput.value,
+                confirm_password: confInput.value,
+              }),
+            });
+            const result = await resp.json();
+
+            if (result.success) {
+              window.location.href = result.redirect;
+            } else {
+              // Показываем ошибку сервера (например, email занят)
+              emailErrEl.textContent = result.error || "Ошибка регистрации";
+              emailErrEl.classList.add("active");
+              emailInput.classList.add("input-error");
+            }
+          } catch (err) {
+            emailErrEl.textContent = "Сервер недоступен, попробуйте позже";
+            emailErrEl.classList.add("active");
+            emailInput.classList.add("input-error");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

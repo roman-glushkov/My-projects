@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CineLog - Твой кино-книжный дневник</title>
+    <link rel="stylesheet" href="static/style/index_style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-content">
+        <div class="logo">CineLog</div>
+        <h1 class="main-title">Твой персональный дневник кино и книг</h1>
+        <p class="subtitle">
+          Отслеживай всё, что смотришь и читаешь. Ставь оценки, пиши рецензии,
+          открывай для себя новое и делись впечатлениями — всё в одном месте.
+        </p>
+
+        <div class="features-grid">
+          <div class="feature-item">
+            <div class="feature-icon">✓</div>
+            <p class="feature-text">
+              Фильмы, сериалы, аниме и книги в одной библиотеке
+            </p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">✓</div>
+            <p class="feature-text">Гибкая система оценок и рецензий</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">✓</div>
+            <p class="feature-text">
+              Мощные фильтры и персонализированные подборки
+            </p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">✓</div>
+            <p class="feature-text">
+              Статистика и аналитика твоих предпочтений
+            </p>
+          </div>
+        </div>
+        <button class="cta-button" onclick="window.location.href='login.html'">
+          Начать бесплатно
+        </button>
+      </div>
+
+      <div class="demo-preview">
+        <div class="demo-container">
+          <div class="demo-header">
+            <div class="category-tabs">
+              <div class="tab active">Фильмы</div>
+              <div class="tab">Сериалы</div>
+              <div class="tab">Аниме</div>
+              <a href="profile.htm">
+                <div class="tab">Книги</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="media-item">
+            <div
+              class="cover-image"
+              style="
+                background-image: url('https://i.pinimg.com/736x/8e/0d/ab/8e0dab8699be85720ce55845065bf6dc.jpg');
+              "
+            ></div>
+            <div class="item-info">
+              <h3 class="item-title">Интерстеллар</h3>
+              <p class="item-meta">2014 • Фантастика</p>
+            </div>
+            <div class="item-rating">★★★★★</div>
+          </div>
+
+          <div class="media-item">
+            <div
+              class="cover-image"
+              style="
+                background-image: url('https://avatars.mds.yandex.net/get-kinopoisk-image/4483445/a5115b26-38a4-40cb-9d17-657582298aa8/1920x');
+              "
+            ></div>
+            <div class="item-info">
+              <h3 class="item-title">Муфаса: Король Лев</h3>
+              <p class="item-meta">2024 • Приключение</p>
+            </div>
+            <div class="item-rating">★★★★☆</div>
+          </div>
+
+          <div class="media-item">
+            <div
+              class="cover-image"
+              style="
+                background-image: url('https://avatars.mds.yandex.net/get-kinopoisk-image/1599028/0b76b2a2-d1c7-4f04-a284-80ff7bb709a4/600x900');
+              "
+            ></div>
+            <div class="item-info">
+              <h3 class="item-title">Побег из Шоушенка</h3>
+              <p class="item-meta">1994 • Драма</p>
+            </div>
+            <div class="item-rating">★★★★★</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

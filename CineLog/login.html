@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CineLog — Вход в ваш кино-книжный дневник</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="static/style/login_style.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar">
+        <div class="logo">CineLog</div>
+        <div class="nav-links">
+          <a href="#" class="nav-link active">Вход</a>
+        </div>
+      </nav>
+
+      <main class="auth-container">
+        <div class="auth-card">
+          <h1 class="auth-title">Войдите в ваш дневник</h1>
+          <p class="auth-subtitle">Отслеживайте всё, что смотрите и читаете</p>
+
+          <form class="auth-form">
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                id="email"
+                class="form-input"
+                placeholder="your@email.com"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="password" class="form-label">Пароль</label>
+              <input
+                type="password"
+                id="password"
+                class="form-input"
+                placeholder="••••••••"
+                required
+              />
+              <a href="#" class="forgot-password">Забыли пароль?</a>
+            </div>
+
+            <button type="submit" class="primary-btn">Войти</button>
+
+            <div class="divider">
+              <span>или</span>
+            </div>
+
+            <div class="social-auth">
+              <button type="button" class="social-btn google-btn">
+                <svg
+                  class="social-icon"
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                >
+                  <path
+                    d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                    fill="#4285F4"
+                  ></path>
+                  <path
+                    d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                    fill="#34A853"
+                  ></path>
+                  <path
+                    d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                    fill="#FBBC05"
+                  ></path>
+                  <path
+                    d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                    fill="#EA4335"
+                  ></path>
+                </svg>
+                Продолжить с Google
+              </button>
+              <button type="button" class="social-btn facebook-btn">
+                <svg
+                  class="social-icon"
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                >
+                  <path
+                    d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"
+                    fill="#1877F2"
+                  ></path>
+                </svg>
+                Продолжить с Facebook
+              </button>
+            </div>
+          </form>
+
+          <div class="auth-footer">
+            Ещё нет аккаунта?
+            <a href="registr.html" class="auth-link">Зарегистрироваться</a>
+          </div>
+        </div>
+
+        <div class="auth-hero">
+          <div class="hero-content">
+            <h2>Ваш персональный дневник</h2>
+            <p>Сохраняйте впечатления и анализируйте просмотренное</p>
+
+            <div class="reviews-container">
+              <!-- Обновленный пример для "Настоящий детектив" -->
+              <div class="review-card">
+                <div class="review-header">
+                  <div
+                    class="review-cover"
+                    style="
+                      background-image: url('https://umagazine.ru/upload/resize_cache/iblock/b03/650_1200_1/b039121cd0cb04d10669dad8d761ed0e.jpg');
+                    "
+                  ></div>
+                  <div class="review-meta">
+                    <div class="review-title">Настоящий детектив</div>
+                    <div class="review-rating">★★★★★</div>
+                    <div class="review-date">Просмотрено 12.06.2024</div>
+                  </div>
+                </div>
+                <div class="review-text">
+                  Первый сезон - это шедевр криминального жанра. Макконахи и
+                  Харрельсон создали одну из самых атмосферных пар в истории ТВ.
+                  Философские монологи, мрачная Луизиана и идеальный саундтрек.
+                  Особенно впечатлила 6-я серия с культовым 6-минутным планом!
+                </div>
+              </div>
+
+              <!-- Обновленный пример для "Офис" -->
+              <div class="review-card">
+                <div class="review-header">
+                  <div
+                    class="review-cover"
+                    style="
+                      background-image: url('https://i.pinimg.com/736x/ac/77/90/ac7790e75694f3f9e289bd6caae35091.jpg');
+                    "
+                  ></div>
+                  <div class="review-meta">
+                    <div class="review-title">Офис</div>
+                    <div class="review-rating">★★★★☆</div>
+                    <div class="review-date">Просмотрено 05.06.2024</div>
+                  </div>
+                </div>
+                <div class="review-text">
+                  После 3 сезона сериал нашел свой идеальный баланс между
+                  абсурдом и теплотой. Персонажи перестали быть карикатурами и
+                  обрели глубину. Особенно хороши эпизоды "Dinner Party" и
+                  "Stress Relief". Жаль, что после 7 сезона качество немного
+                  упало.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script>
+      document
+        .querySelector(".auth-form")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+
+          const formData = new FormData();
+          formData.append("email", document.getElementById("email").value);
+          formData.append(
+            "password",
+            document.getElementById("password").value
+          );
+
+          try {
+            const response = await fetch("login.php", {
+              method: "POST",
+              body: formData,
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+              window.location.href = result.redirect;
+            } else {
+              alert(result.error || "Ошибка входа");
+            }
+          } catch (error) {
+            console.error("Ошибка:", error);
+            alert("Сервер не отвечает");
+          }
+        });
+    </script>
+  </body>
+</html>

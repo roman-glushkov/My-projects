@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Волейбол Марий Эл | Официальный сайт</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <style>
+      /* Цветовые переменные */
+      :root {
+        --color-dark: #0d1b2a;
+        --color-red: #e63946;
+        --color-blue: #3a86ff;
+        --color-white: #ffffff;
+        --color-light-gray: #f8f9fa;
+        --max-width: 1200px;
+      }
+
+      /* Общие сбросы */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Open Sans", sans-serif;
+        color: #333;
+        background-color: var(--color-white);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+      .container {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 0 15px;
+      }
+      a {
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+      ul {
+        list-style: none;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      section {
+        padding: 80px 0;
+      }
+      h2 {
+        font-size: 2.5rem;
+        color: var(--color-dark);
+        margin-bottom: 50px;
+        padding-top: 10px;
+        border-top: 4px solid var(--color-red);
+        display: inline-block;
+        position: relative;
+      }
+      h2::after {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        left: 0;
+        width: 80px;
+        height: 3px;
+        background: var(--color-blue);
+      }
+      .btn {
+        display: inline-block;
+        padding: 12px 25px;
+        border-radius: 4px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        text-align: center;
+        border: none;
+        font-size: 1rem;
+      }
+      .btn--primary {
+        background-color: var(--color-red);
+        color: var(--color-white);
+      }
+      .btn--primary:hover {
+        background-color: #c0323e;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
+      }
+      .btn--secondary {
+        background-color: var(--color-blue);
+        color: var(--color-white);
+      }
+      .btn--secondary:hover {
+        background-color: #336dd1;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(58, 134, 255, 0.3);
+      }
+      .btn--accent {
+        background-color: var(--color-red);
+        color: var(--color-white);
+      }
+      .btn--accent:hover {
+        background-color: #c0323e;
+        transform: translateY(-3px);
+      }
+      .section-title {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+      .section-title h2 {
+        margin: 0 auto 20px;
+        display: block;
+        border-top: none;
+      }
+      .section-title h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .section-title p {
+        max-width: 700px;
+        margin: 0 auto;
+        color: #555;
+        font-size: 1.1rem;
+      }
+
+      /* Header */
+      .site-header {
+        background-color: var(--color-dark);
+        color: var(--color-white);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      .header-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+      }
+      .logo img {
+        height: 50px;
+        transition: all 0.3s ease;
+      }
+      .logo:hover img {
+        transform: scale(1.05);
+      }
+      .main-nav ul {
+        display: flex;
+        gap: 30px;
+      }
+      .main-nav a {
+        color: var(--color-white);
+        font-weight: 600;
+        font-size: 1.05rem;
+        position: relative;
+        padding: 5px 0;
+      }
+      .main-nav a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--color-red);
+        transition: width 0.3s ease;
+      }
+      .main-nav a:hover::after {
+        width: 100%;
+      }
+      .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        color: var(--color-white);
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+
+      /* Hero Slider */
+      .hero-slider {
+        margin-top: 80px;
+      }
+      .swiper-slide {
+        height: 600px;
+        position: relative;
+        background-size: cover;
+        background-position: center;
+      }
+      .slide-content {
+        position: absolute;
+        bottom: 100px;
+        left: 100px;
+        max-width: 600px;
+        color: var(--color-white);
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        animation: fadeInUp 1s ease;
+      }
+      .slide-content h2 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        border-top: none;
+        color: var(--color-white);
+      }
+      .slide-content p {
+        font-size: 1.25rem;
+        margin-bottom: 30px;
+      }
+      .swiper-button-next,
+      .swiper-button-prev {
+        color: var(--color-white);
+        background: rgba(13, 27, 42, 0.5);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+      }
+      .swiper-button-next:hover,
+      .swiper-button-prev:hover {
+        background: var(--color-red);
+      }
+      .swiper-button-next::after,
+      .swiper-button-prev::after {
+        font-size: 1.5rem;
+      }
+      .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        background: var(--color-white);
+        opacity: 0.7;
+      }
+      .swiper-pagination-bullet-active {
+        background: var(--color-red);
+        opacity: 1;
+      }
+
+      /* News Slider */
+      .section-news-slider {
+        background-color: var(--color-light-gray);
+        position: relative;
+      }
+      /* Обновленные стили для слайдера новостей */
+      .news-swiper-container {
+        position: relative;
+        padding: 0 60px;
+      }
+
+      .news-swiper {
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .news-prev,
+      .news-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        background: var(--color-white);
+        color: var(--color-dark);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        z-index: 10;
+        transition: all 0.3s ease;
+      }
+
+      .news-prev {
+        left: 10px;
+      }
+
+      .news-next {
+        right: 10px;
+      }
+
+      .news-prev:hover,
+      .news-next:hover {
+        background: var(--color-blue);
+        color: var(--color-white);
+        transform: translateY(-50%) scale(1.1);
+      }
+      .news-card {
+        background: var(--color-white);
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        height: 100%;
+        position: relative; /* Для позиционирования кнопок */
+      }
+      .news-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+      .news-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+      .news-card-content {
+        padding: 20px;
+      }
+      .news-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+        color: var(--color-dark);
+      }
+      .news-date {
+        color: var(--color-red);
+        font-weight: 600;
+        margin-bottom: 15px;
+        display: block;
+        font-size: 0.9rem;
+      }
+      .news-card p {
+        color: #555;
+        margin-bottom: 20px;
+        line-height: 1.6;
+      }
+      .read-more {
+        color: var(--color-blue);
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+      }
+      .read-more i {
+        margin-left: 5px;
+        transition: transform 0.3s ease;
+      }
+      .read-more:hover i {
+        transform: translateX(5px);
+      }
+
+      /* Новые стили для кнопок навигации слайдера новостей */
+      .news-navigation {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: calc(100% - 100px); /* Учитываем отступы */
+        left: 50px;
+        display: flex;
+        justify-content: space-between;
+        z-index: 10;
+      }
+      .news-prev,
+      .news-next {
+        background: var(--color-white);
+        color: var(--color-dark);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      /* Schedule */
+      .section-schedule-preview {
+        background-color: var(--color-white);
+      }
+      .table-schedule {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 30px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .table-schedule thead {
+        background-color: var(--color-dark);
+        color: var(--color-white);
+      }
+      .table-schedule th {
+        padding: 15px;
+        text-align: left;
+        font-weight: 600;
+      }
+      .table-schedule td {
+        padding: 12px 15px;
+        border-bottom: 1px solid #eee;
+      }
+      .table-schedule tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+      .table-schedule tr:hover {
+        background-color: #f0f5ff;
+      }
+
+      /* Players */
+      .section-players {
+        background-color: var(--color-light-gray);
+      }
+      .players-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 30px;
+        margin-bottom: 40px;
+      }
+      .player-card {
+        background: var(--color-white);
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        text-align: center;
+      }
+      .player-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+      .player-card img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+      }
+      .player-info {
+        padding: 20px;
+      }
+      .player-info h4 {
+        font-size: 1.4rem;
+        margin-bottom: 5px;
+        color: var(--color-dark);
+      }
+      .player-info p {
+        color: var(--color-red);
+        font-weight: 600;
+        font-size: 1.1rem;
+      }
+
+      /* Coaches */
+      .section-coaches {
+        background-color: var(--color-white);
+      }
+      .coaches-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 30px;
+      }
+      .coach-card {
+        background: var(--color-white);
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        text-align: center;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      .coach-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+      .coach-card img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+      }
+      .coach-info {
+        padding: 20px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      .coach-info h4 {
+        font-size: 1.4rem;
+        margin-bottom: 5px;
+        color: var(--color-dark);
+      }
+      .coach-info p {
+        color: var(--color-blue);
+        font-weight: 600;
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+      }
+      .coach-bio {
+        color: #555;
+        font-weight: normal;
+        font-size: 0.95rem;
+        flex-grow: 1;
+      }
+
+      /* Facilities */
+      .section-facilities {
+        background-color: var(--color-white);
+      }
+      .facilities-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 30px;
+      }
+      .facility-card {
+        background: var(--color-white);
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      .facility-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+      .facility-img {
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+      }
+      .facility-info {
+        padding: 20px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      .facility-info h3 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+        color: var(--color-dark);
+      }
+      .facility-info p {
+        color: #555;
+        margin-bottom: 15px;
+        line-height: 1.6;
+        flex-grow: 1;
+      }
+      .facility-meta {
+        display: flex;
+        justify-content: space-between;
+        color: var(--color-blue);
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+
+      /* Footer */
+      .site-footer {
+        background-color: var(--color-dark);
+        color: var(--color-white);
+        padding: 60px 0 0;
+      }
+      .footer-inner {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 40px;
+      }
+      .footer-col h4 {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 10px;
+      }
+      .footer-col h4::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50px;
+        height: 2px;
+        background: var(--color-red);
+      }
+      .footer-col p {
+        margin-bottom: 15px;
+        color: #ccc;
+      }
+      .footer-links li {
+        margin-bottom: 12px;
+      }
+      .footer-links a {
+        color: #ccc;
+        display: flex;
+        align-items: center;
+      }
+      .footer-links a:hover {
+        color: var(--color-white);
+        transform: translateX(5px);
+      }
+      .footer-links a i {
+        margin-right: 10px;
+        color: var(--color-red);
+      }
+      .social-links {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+      }
+      .social-links a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+        color: var(--color-white);
+        transition: all 0.3s ease;
+      }
+      .social-links a:hover {
+        background: var(--color-red);
+        transform: translateY(-5px);
+      }
+      .footer-bottom {
+        text-align: center;
+        padding: 20px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        color: #aaa;
+        font-size: 0.9rem;
+      }
+      .footer-logo {
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+      .footer-logo img {
+        height: 50px;
+      }
+      .text-center {
+      text-align: center;
+    }
+
+      /* Анимации */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Адаптив */
+      @media (max-width: 992px) {
+        .slide-content {
+          left: 50px;
+          bottom: 70px;
+        }
+        .slide-content h2 {
+          font-size: 2.5rem;
+        }
+        section {
+          padding: 60px 0;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .mobile-menu-btn {
+          display: block;
+        }
+        .main-nav {
+          position: fixed;
+          top: 80px;
+          left: 0;
+          width: 100%;
+          background: var(--color-dark);
+          padding: 20px;
+          transform: translateY(-150%);
+          transition: transform 0.4s ease;
+          box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        .main-nav.active {
+          transform: translateY(0);
+        }
+        .main-nav ul {
+          flex-direction: column;
+          gap: 15px;
+        }
+        .swiper-slide {
+          height: 500px;
+        }
+        .slide-content {
+          left: 30px;
+          bottom: 50px;
+        }
+        .slide-content h2 {
+          font-size: 2rem;
+        }
+        .slide-content p {
+          font-size: 1.1rem;
+        }
+        .players-grid {
+          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        }
+        .coaches-grid {
+          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        }
+        .section-title h2 {
+          font-size: 2rem;
+        }
+        .news-navigation {
+          display: none; /* Скрываем кнопки на мобильных */
+        }
+        .news-swiper-container {
+          padding: 0 20px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .slide-content {
+          left: 20px;
+          right: 20px;
+          bottom: 40px;
+        }
+        .slide-content h2 {
+          font-size: 1.8rem;
+        }
+        .facilities-list {
+          grid-template-columns: 1fr;
+        }
+        .footer-inner {
+          grid-template-columns: 1fr;
+          gap: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo">
+          <img src="static/images/uss.png" alt="УСС Марий Эл" />
+        </a>
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="#hero">Главная</a></li>
+            <li><a href="#about">О команде</a></li>
+            <li><a href="#schedule">Расписание</a></li>
+            <li><a href="#news">Новости</a></li>
+            <li><a href="#gallery">Галерея</a></li>
+            <li><a href="#facilities">Сооружения</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Slider -->
+    <section id="hero" class="hero-slider">
+      <div class="swiper-container hero-swiper">
+        <div class="swiper-wrapper">
+          <!-- Слайд 1 -->
+          <div
+            class="swiper-slide"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1592656094267-764a45160876?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+            "
+          >
+            <div class="slide-content">
+              <h2>Старт нового сезона 2025/2026</h2>
+              <p>
+                1 сентября - торжественное открытие сезона! Наша команда
+                усиленно готовится и ждёт вашей поддержки на трибунах!
+              </p>
+              <a href="#schedule" class="btn btn--primary">Расписание игр</a>
+            </div>
+          </div>
+          <!-- Слайд 2 -->
+          <div
+            class="swiper-slide"
+            style="
+              background-image: url('https://sun9-45.userapi.com/s/v1/if2/dlkB2bTrQQTXtv-FCO-T5hWZTUcEY9YTo83oCgd0tvLbVKG7TUqlPaIbicNzhI73MCiR9s_gvMtE2JuqPhDhWjxR.jpg?quality=95&as=32x21,48x32,72x48,108x72,160x106,240x160,360x240,480x319,540x359,640x426,720x479,1080x719,1280x852,1440x958,2560x1704&from=bu&cs=2560x0');
+            "
+          >
+            <div class="slide-content">
+              <h2>Волейбол в Марий Эл</h2>
+              <p>
+                Профессиональная команда, представляющая Республику Марий Эл в
+                Первой лиге России
+              </p>
+              <a href="sostav_cc.html" class="btn btn--secondary">О команде</a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <!-- Latest News Slider -->
+    <section id="news" class="section-news-slider">
+      <div class="container">
+        <div class="section-title">
+          <h2>Последние новости</h2>
+          <p>Будьте в курсе всех событий нашей команды и волейбольного клуба</p>
+        </div>
+        <div class="news-swiper-container">
+          <div class="swiper news-swiper">
+            <div class="swiper-wrapper">
+              <!-- Новость 1 -->
+              <div class="swiper-slide">
+                <div class="news-card">
+                  <img
+                    src="https://sun9-72.userapi.com/s/v1/if2/6zyPrmOokKuAfUu-l891DmekdWTxZfBAcj_TFPRn9zi8rka8D3YOcGDSNk4-NYL-h1ITD89Z0gkRsi_9E7wNqYMj.jpg?quality=96&as=32x21,48x32,72x48,108x72,160x107,240x160,360x240,480x320,540x360,640x426,720x480,1080x720,1280x853&from=bu&cs=1280x0"
+                    alt="Ветеран СВО"
+                  />
+                  <div class="news-card-content">
+                    <h3>
+                      Ветеран СВО завоевал золото на чемпионате по триатлону
+                    </h3>
+                    <span class="news-date">24.08.2025</span>
+                    <p>
+                      Вячеслав Васильев, заслуженный спортсмен и герой
+                      специальной военной операции, продолжает вдохновлять
+                      своими достижениями.
+                    </p>
+                    <a href="#" class="read-more"
+                      >Подробнее <i class="fas fa-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <!-- Новость 2 -->
+              <div class="swiper-slide">
+                <div class="news-card">
+                  <img
+                    src="https://www.gtrkmariel.ru/upload/iblock/e31/e3139c1c59fa4b122626b369965f6ccf.jpg"
+                    alt="Водный дворец"
+                  />
+                  <div class="news-card-content">
+                    <h3>Водный дворец возобновляет работу</h3>
+                    <span class="news-date">27.06.2025</span>
+                    <p>
+                      С 30 июня Водный дворец «Йошкар-Ола» возвращается к
+                      обычному режиму работы.
+                    </p>
+                    <a href="#" class="read-more"
+                      >Подробнее <i class="fas fa-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <!-- Новость 3 -->
+              <div class="swiper-slide">
+                <div class="news-card">
+                  <img
+                    src="https://sun1-97.userapi.com/s/v1/if2/itWRfiusFE1YLTfFrCbcXSedfvXha5NQ0scYzSVthAv5NHT7dGBX2nkBgd-vO8RiGTWsbMe5Fc6n74VE-6trJc1W.jpg?quality=96&as=32x17,48x26,72x39,108x59,160x87,240x131,360x196,480x261,540x294,640x348,720x392,1080x588,1280x697&from=bu&u=BtB5CT25jt85XgJn8VPIQtavRLgFj_8Y919-6Zc_O_U&cs=640x0"
+                    alt="Спортивная площадка"
+                  />
+                  <div class="news-card-content">
+                    <h3>Новый спортивный объект в Козьмодемьянске</h3>
+                    <span class="news-date">26.06.2025</span>
+                    <p>
+                      На территории школы №1 города Козьмодемьянска появится
+                      современная «умная» спортивная площадка.
+                    </p>
+                    <a href="#" class="read-more"
+                      >Подробнее <i class="fas fa-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <!-- Новость 4 -->
+              <div class="swiper-slide">
+                <div class="news-card">
+                  <img
+                    src="https://sun9-80.userapi.com/s/v1/if2/13pmgwBUMacWjTq2P6onKrkwAJtL6_m_x8k0NwOSVIlOFcdXMQNmmhAEHBzxDYRYCMwI2seInOUxXWd8WZIZe4AE.jpg?quality=95&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1080x810,1280x960,1440x1080,2560x1920&from=bu&cs=2560x0"
+                    alt="Кубок Главы"
+                  />
+                  <div class="news-card-content">
+                    <h3>Успех на Кубке Главы Йошкар-Олы</h3>
+                    <span class="news-date">01.06.2025</span>
+                    <p>
+                      Наши юные волейболисты показали отличный результат на
+                      турнире по пляжному волейболу.
+                    </p>
+                    <a href="#" class="read-more"
+                      >Подробнее <i class="fas fa-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <!-- Новость 5 -->
+              <div class="swiper-slide">
+                <div class="news-card">
+                  <img
+                    src="https://sun9-78.userapi.com/s/v1/ig2/4tAn_JPXP8ySMP2Prky58U-3cHRLIIWakzGWum_BQJCIIx8aDRznps0SrQoZ6nPDlZoiLX9_wqxkuB-YxgGfUZD1.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&cs=1920x0"
+                    alt="Кубок города"
+                  />
+                  <div class="news-card-content">
+                    <h3>Кубок города по пляжному волейболу</h3>
+                    <span class="news-date">07-08.06.2025</span>
+                    <p>
+                      В соревнованиях приняли участие три команды с нашими
+                      игроками.
+                    </p>
+                    <a href="#" class="read-more"
+                      >Подробнее <i class="fas fa-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="news-prev"><i class="fas fa-chevron-left"></i></div>
+          <div class="news-next"><i class="fas fa-chevron-right"></i></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Schedule Preview -->
+    <section id="schedule" class="section-schedule-preview">
+      <div class="container">
+        <div class="section-title">
+          <h2>Расписание матчей</h2>
+          <p>Предстоящие игры нашей команды в текущем сезоне</p>
+        </div>
+        <div class="schedule-info">
+          <p>
+            Подготовка к новому сезону идёт полным ходом.
+            Следите за обновлениями!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Players -->
+    <section id="players" class="section-players">
+      <div class="container">
+        <div class="section-title">
+          <h2>Наши игроки</h2>
+          <p>Знакомьтесь с игроками нашей команды</p>
+        </div>
+        <div class="players-grid">
+          <!-- Игрок 1 -->
+          <div class="player-card">
+            <img 
+              src="static/images/Caregorodcev.png"
+              alt="Игорь Царегородцев"
+            />
+            <div class="player-info">
+              <h4>Игорь Царегородцев</h4>
+              <p>Доигровщик</p>
+            </div>
+          </div>
+          <!-- Игрок 2 -->
+          <div class="player-card">
+            <img src="static/images/Nagaicev.png" alt="Семен Нагайцев" />
+            <div class="player-info">
+              <h4>Семён Нагайцев (капитан команды)</h4>
+              <p>Связующий</p>
+            </div>
+          </div>
+          <!-- Игрок 3 -->
+          <div class="player-card">
+            <img
+              src="static/images/Kalakin.png"
+              alt="Кирилл Калякин"
+            />
+            <div class="player-info">
+              <h4>Кирилл Калякин</h4>
+              <p>Центральный блокирующий</p>
+            </div>
+          </div>
+          <!-- Игрок 4 -->
+          <div class="player-card">
+            <img
+              src="static/images/Glushkov.png"
+              alt="Роман Глушков"
+            />
+            <div class="player-info">
+              <h4>Роман Глушков</h4>
+              <p>Диагональный</p>
+            </div>
+          </div>
+        </div>
+        <!-- Кнопка "Весь состав" -->
+      <div class="text-center" style="margin-top: 30px;">
+        <a href="#" class="btn btn--primary">Весь состав команды</a>
+      </div>
+    </div>
+      </div>
+    </section>
+
+    <!-- Coaches Section -->
+    <section id="coaches" class="section-coaches">
+      <div class="container">
+        <div class="section-title">
+          <h2>Тренеры и руководители</h2>
+          <p>Профессиональный штаб, ведущий команду к победам</p>
+        </div>
+        <div class="coaches-grid">
+          <!-- Руководитель -->
+          <div class="coach-card">
+            <img
+              src="https://sun9-50.userapi.com/s/v1/ig2/KMApulF80R-Qkuay3c4klPZkMjZaG2SsQOTlqJwKDI_VUqUQRYuaQMCt_Jzkf9eaT89eWzUJi5EfCe-mVJoDzk4x.jpg?quality=95&as=32x48,48x72,72x108,108x162,160x240,240x361,360x541,480x721,540x811,640x961,720x1082,1080x1623,1280x1923,1440x2163,1704x2560&from=bu&cs=1280x0"
+              alt="Сидоркин Андрей Владимирович"
+            />
+            <div class="coach-info">
+              <h4>Сидоркин Андрей Владимирович</h4>
+              <p>Руководитель</p>
+              <p class="coach-bio"></p>
+            </div>
+          </div>
+
+          <!-- Главный тренер -->
+          <div class="coach-card">
+            <img
+              src="https://sun9-65.userapi.com/s/v1/ig2/k5rs4y-7Yuw4-eEbZqRtMZSxYV1iFZlt8c-pZ8nwbV5huH5M10KGk9wEhjScquPSQ-CVJvpggK7DslGng8_obh4q.jpg?quality=95&as=32x48,48x72,72x108,108x162,160x240,240x361,360x541,480x721,540x811,640x961,720x1082,1080x1623,1280x1923,1440x2163,1704x2560&from=bu&cs=1280x0"
+              alt="Голомысов Евгений Вячеславович"
+            />
+            <div class="coach-info">
+              <h4>Голомысов Евгений Вячеславович</h4>
+              <p>Главный тренер</p>
+              <p class="coach-bio"></p>
+            </div>
+          </div>
+
+          <!-- Тренер -->
+          <div class="coach-card">
+            <img
+              src="https://sun9-55.userapi.com/s/v1/ig2/wo-MZkIUMs-cEUY_kdUpjGUl7FwMa5Q0y7LkQNQ-wROMNKGrxlhOeZbtsPS5LbIMVSxlhx_4R0zbhekkIiSto-dn.jpg?quality=95&as=32x48,48x72,72x108,108x162,160x240,240x361,360x541,480x721,540x811,640x961,720x1082,1080x1623,1280x1923,1440x2163,1704x2560&from=bu&cs=1280x0"
+              alt="Николаев Денис Витальевич"
+            />
+            <div class="coach-info">
+              <h4>Николаев Денис Витальевич</h4>
+              <p>Тренер</p>
+              <p class="coach-bio"></p>
+            </div>
+          </div>
+
+          <!-- Администратор 1 -->
+          <div class="coach-card">
+            <img
+              src="static/images/andreeva.jpg"
+              alt="Андреева Наталья Витальевна"
+            />
+            <div class="coach-info">
+              <h4>Андреева Наталья Витальевна</h4>
+              <p>Администратор</p>
+              <p class="coach-bio"></p>
+            </div>
+          </div>
+
+          <!-- Администратор 2 -->
+          <div class="coach-card">
+            <img
+              src="static/images/bezdenezhnykh.jpg"
+              alt="Безденежных Ольга Владиславовна"
+            />
+            <div class="coach-info">
+              <h4>Безденежных Ольга Владиславовна</h4>
+              <p>Администратор</p>
+              <p class="coach-bio"></p>
+            </div>
+          </div>
+
+          <!-- Врач -->
+          <div class="coach-card">
+            <img
+              src="static/images/purtova.jpg"
+              alt="Пуртова Екатерина Владимировна"
+            />
+            <div class="coach-info">
+              <h4>Пуртова Екатерина Владимировна</h4>
+              <p>Врач</p>
+              <p class="coach-bio"></p>
+            </div>
+          </div>
+
+          <!-- Массажист -->
+          <div class="coach-card">
+            <img
+              src="static/images/sirazeev.jpg"
+              alt="Сиразеев Шамиль Анварович"
+            />
+            <div class="coach-info">
+              <h4>Сиразеев Шамиль Анварович</h4>
+              <p>Массажист</p>
+              <p class="coach-bio"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section id="facilities" class="section-facilities">
+      <div class="container">
+        <div class="section-title">
+          <h2>Спортивные сооружения</h2>
+          <p>Современные площадки для тренировок и соревнований</p>
+        </div>
+        <ul class="facilities-list">
+          <li>
+            <div class="facility-card">
+              <div
+                class="facility-img"
+                style="
+                  background-image: url('https://avatars.mds.yandex.net/get-altay/15288133/2a00000196ec99be2254136b91c56831d54a/XXL_height');
+                "
+              ></div>
+              <div class="facility-info">
+                <h3>ФОК "Юбилейный"</h3>
+                <p>
+                  Современный комплекс с волейбольными площадками, тренажёрным
+                  залом и восстановительным центром. Основная тренировочная
+                  база.
+                </p>
+                <div class="facility-meta">
+                  <span>Йошкар-Ола</span>
+                  <span>ул. Советская, 179</span>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="facility-card">
+              <div
+                class="facility-img"
+                style="
+                  background-image: url('https://avatars.mds.yandex.net/i?id=71bfdaf2394e21b51132237a27737ab6efe51d5f-5235644-images-thumbs&n=13');
+                "
+              ></div>
+              <div class="facility-info">
+                <h3>ФОК "Спартак"</h3>
+                <p>
+                  Спортивный комплекс - место проведения домашних матчей
+                  команды. Регулярно проводится ремонт и обновление оборудования
+                  для соответствия стандартам Первой лиги.
+                </p>
+                <div class="facility-meta">
+                  <span>Йошкар-Ола</span>
+                  <span>ул. Карла Маркса, 105А</span>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-col">
+            <a href="index.html" class="footer-logo">
+              <img src="static/images/uss.png" alt="УСС Марий Эл" />
+            </a>
+            <p>
+              Волейбольный клуб "УСС Марий Эл" - профессиональная команда,
+              выступающая в Первой лиге России.
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-vk"></i></a>
+              <a href="#"><i class="fab fa-telegram"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Контакты</h4>
+            <p><i class="fas fa-phone"></i> +7 (987) 721-03-71</p>
+            <p><i class="fas fa-envelope"></i> info@volleymariel.ru</p>
+            <p><i class="fas fa-clock"></i> Пн-Пт: 9:00 - 18:00</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          &copy; 2025 volleymariel.infy.uk. Все права защищены.
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      // Инициализация слайдеров
+      const heroSwiper = new Swiper(".hero-swiper", {
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        autoplay: { delay: 5000 },
+      });
+
+      const newsSwiper = new Swiper(".news-swiper", {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        loop: false,
+        navigation: {
+          nextEl: ".news-next",
+          prevEl: ".news-prev",
+        },
+        breakpoints: {
+          992: { slidesPerView: 3 },
+          768: { slidesPerView: 2 },
+          0: { slidesPerView: 1 },
+        },
+      });
+
+      // Мобильное меню
+      const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+      const mainNav = document.querySelector(".main-nav");
+
+      mobileMenuBtn.addEventListener("click", () => {
+        mainNav.classList.toggle("active");
+        const icon = mobileMenuBtn.querySelector("i");
+        if (mainNav.classList.contains("active")) {
+          icon.classList.remove("fa-bars");
+          icon.classList.add("fa-times");
+        } else {
+          icon.classList.remove("fa-times");
+          icon.classList.add("fa-bars");
+        }
+      });
+
+      // Плавная прокрутка
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 80,
+              behavior: "smooth",
+            });
+
+            if (mainNav.classList.contains("active")) {
+              mainNav.classList.remove("active");
+              const icon = mobileMenuBtn.querySelector("i");
+              icon.classList.remove("fa-times");
+              icon.classList.add("fa-bars");
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

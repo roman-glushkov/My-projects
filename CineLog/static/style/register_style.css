@@ -1,0 +1,385 @@
+/* Общие стили */
+:root {
+  --primary-color: #3b5a83;
+  --primary-hover: #2f4867;
+  --text-dark: #1a2c44;
+  --text-medium: #587092;
+  --text-light: #677b91;
+  --bg-light: #f7f9fb;
+  --border-color: #e0e6ed;
+  --white: #ffffff;
+  --google-red: #ea4335;
+  --facebook-blue: #1877f2;
+  --rating-yellow: #fdcb5a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Навигация */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  margin-bottom: 40px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-link {
+  color: var(--text-dark);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+.nav-link.active {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Основной контент */
+.registration-container {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  gap: 30px;
+  background-color: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.benefits-section,
+.reviews-section {
+  padding: 40px;
+  background-color: var(--bg-light);
+}
+
+.auth-card {
+  padding: 50px 40px;
+}
+
+.section-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+/* Форма регистрации */
+.auth-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.auth-subtitle {
+  color: var(--text-light);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.auth-form {
+  margin-top: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.form-input {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-light);
+  transition: border 0.2s;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(59, 90, 131, 0.1);
+}
+
+.primary-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 10px;
+}
+
+.primary-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 25px 0;
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: var(--border-color);
+}
+
+.divider::before {
+  margin-right: 15px;
+}
+
+.divider::after {
+  margin-left: 15px;
+}
+
+/* Социальные кнопки */
+.social-auth {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 500;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  background-color: var(--white);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.social-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.google-btn {
+  color: var(--text-dark);
+  border-color: rgba(234, 67, 53, 0.2);
+}
+
+.google-btn:hover {
+  background-color: rgba(234, 67, 53, 0.05);
+}
+
+.facebook-btn {
+  color: var(--facebook-blue);
+  border-color: rgba(24, 119, 242, 0.2);
+}
+
+.facebook-btn:hover {
+  background-color: rgba(24, 119, 242, 0.05);
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.auth-footer {
+  margin-top: 30px;
+  text-align: center;
+  color: var(--text-light);
+}
+
+.auth-link {
+  color: var(--primary-color);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+/* Блок преимуществ */
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.benefit-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--primary-color);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.benefit-content h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.benefit-content p {
+  font-size: 14px;
+  color: var(--text-light);
+}
+
+/* Блок рецензий */
+.reviews-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.review-card {
+  background-color: var(--white);
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+}
+
+.review-card:hover {
+  transform: translateY(-3px);
+}
+
+.review-header {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+
+.review-cover {
+  width: 60px;
+  height: 85px;
+  border-radius: 6px;
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.review-meta {
+  flex: 1;
+}
+
+.review-title {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.review-rating {
+  color: var(--rating-yellow);
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.review-date {
+  font-size: 12px;
+  color: var(--text-light);
+  opacity: 0.8;
+}
+
+.review-text {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-medium);
+  padding: 8px 0;
+  border-top: 1px dashed var(--border-color);
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+  .registration-container {
+    grid-template-columns: 1fr;
+  }
+
+  .benefits-section,
+  .reviews-section {
+    display: none;
+  }
+
+  .auth-card {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .auth-card {
+    padding: 30px 20px;
+  }
+}
+.error-message.active {
+  display: block;
+  color: #e74c3c; /* ярко-красный */
+}
+
+/* стиль для инпута с ошибкой */
+.input-error {
+  border: 1px solid #e74c3c !important; /* красная рамка */
+  box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.2); /* лёгкое свечение */
+}
