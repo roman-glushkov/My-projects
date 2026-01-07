@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top, #0b0f2c, #010314);
+  color: white;
+}
+
+canvas#bubbles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+#quiz {
+  position: relative;
+  z-index: 1;
+  background: rgba(20, 25, 50, 0.85);
+  padding: 40px;
+  border-radius: 24px;
+  width: 700px;
+  max-width: 90vw;
+  text-align: center;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 40px rgba(0, 212, 255, 0.3), 0 20px 40px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#quiz h2 {
+  margin-bottom: 15px;
+  font-size: 32px;
+  background: linear-gradient(45deg, #00d4ff, #0078ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+#quiz p {
+  opacity: 0.9;
+  margin-bottom: 25px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+button {
+  background: linear-gradient(45deg, #0078ff, #00d4ff);
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 600;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 120, 255, 0.3);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(0, 120, 255, 0.5);
+}
+
+.answers {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.answer {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  word-wrap: break-word;
+  border: 2px solid transparent;
+  font-size: 16px;
+}
+
+.answer:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(0, 212, 255, 0.3);
+  transform: translateY(-3px);
+}
+
+.correct {
+  background: rgba(76, 175, 80, 0.25);
+  border-color: #4caf50;
+}
+
+.wrong {
+  background: rgba(244, 67, 54, 0.25);
+  border-color: #f44336;
+}
+
+img.answer-img {
+  width: 100%;
+  border-radius: 12px;
+  height: 200px;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+#progress-container {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  height: 12px;
+  margin: 30px 0 20px;
+  overflow: hidden;
+}
+
+#progress {
+  height: 100%;
+  background: linear-gradient(90deg, #00d4ff, #0078ff);
+  width: 0%;
+  border-radius: 10px;
+  transition: width 0.4s ease;
+}
+
+.score {
+  margin-top: 20px;
+  font-size: 18px;
+  opacity: 0.9;
+  color: #00d4ff;
+  font-weight: 600;
+}
+
+/* Стили для ввода текста */
+input[type="text"] {
+  width: 100%;
+  padding: 16px 20px;
+  border-radius: 12px;
+  border: 2px solid rgba(0, 212, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 16px;
+  margin: 20px 0;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #00d4ff;
+  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.2);
+}
+
+input[type="text"]::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Контейнер для изображений вопроса */
+.images-container img {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 16px;
+  object-fit: cover;
+  margin: 10px;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Кнопки раундов */
+.selectRound {
+  background: linear-gradient(45deg, #667eea, #764ba2) !important;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3) !important;
+}
+
+.selectRound:hover {
+  box-shadow: 0 6px 25px rgba(102, 126, 234, 0.5) !important;
+}
