@@ -1,0 +1,32 @@
+{
+  "players": {
+    "Слава": {
+      "games": {
+        "21": { "wins": 17, "losses": 0 },
+        "Уно": { "wins": 0, "losses": 48 },
+        "Дурак": { "wins": 0, "losses": 15 }
+      }
+    },
+    "Рома": {
+      "games": {
+        "21": { "wins": 5, "losses": 0 },
+        "Уно": { "wins": 0, "losses": 32 },
+        "Дурак": { "wins": 0, "losses": 12 }
+      }
+    },
+    "Дамир": {
+      "games": {
+        "21": { "wins": 11, "losses": 0 },
+        "Уно": { "wins": 0, "losses": 3 },
+        "Дурак": { "wins": 0, "losses": 25 }
+      }
+    },
+    "Аня": {
+      "games": {
+        "21": { "wins": 5, "losses": 0 },
+        "Дурак": { "wins": 0, "losses": 32 },
+        "Уно": { "wins": 0, "losses": 57 }
+      }
+    }
+  }
+}

@@ -1,0 +1,514 @@
+/* ===== АНИМАЦИИ ===== */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== ИНТРО РАУНДА ===== */
+.intro-container {
+  text-align: center;
+  padding: 10px;
+}
+
+.intro-emoji {
+  font-size: 80px;
+  margin-bottom: 15px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.intro-round-number {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffd700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.intro-title {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.intro-info-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 30px 35px;
+  margin: 25px 0;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  display: inline-block;
+  text-align: left;
+}
+
+.intro-info-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.intro-info-icon {
+  font-size: 36px;
+}
+
+.intro-info-text {
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+}
+
+.intro-description {
+  font-size: 22px;
+  color: #e0d5ff;
+  max-width: 700px;
+  margin: 20px auto;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* ===== КНОПКИ ===== */
+.btn-start-round {
+  color: white;
+  border: none;
+  padding: 20px 60px;
+  border-radius: 60px;
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.btn-start-round:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+}
+
+.btn-check {
+  padding: 16px 40px;
+  width: 250px;
+  display: block;
+  margin: 0 auto;
+  font-size: 22px;
+  text-align: center;
+}
+
+.btn-next {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.btn-review {
+  font-size: 22px;
+  padding: 16px 40px;
+}
+
+/* ===== ТАЙМЕР ===== */
+.timer {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.timer-warning {
+  color: #ff4757;
+  animation: pulse 0.5s infinite;
+}
+
+.timer-normal {
+  color: #ffd700;
+}
+
+/* ===== ВОПРОС ===== */
+.question-text {
+  font-size: 34px !important;
+  margin-bottom: 30px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+/* ===== WORD-BUILD ===== */
+.word-build-prompt {
+  font-size: 52px !important;
+  text-align: center;
+  margin: 30px 0;
+}
+
+/* ===== ODD-ONE-OUT ===== */
+.odd-one-out-words {
+  font-size: 28px;
+  text-align: center;
+  margin: 25px 0;
+}
+
+/* ===== IMAGE-INPUT ===== */
+.image-input-img {
+  max-width: 100%;
+  max-height: 350px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== ПОЛЯ ВВОДА ===== */
+.input-answer {
+  font-size: 24px;
+  margin: 20px auto;
+  display: block;
+}
+
+/* ===== ОТВЕТЫ (text-choice) ===== */
+.answer-text {
+  font-size: 18px;
+  padding: 16px 18px;
+}
+
+.answer-letter {
+  color: #00d4ff;
+  font-size: 18px;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+/* ===== ПРОГРЕСС-БАР ===== */
+.score-text {
+  font-size: 22px;
+}
+
+/* ===== ОБЪЯСНЕНИЕ ===== */
+.explanation-text {
+  font-size: 20px;
+}
+
+/* ===== ФИНАЛ РАУНДА ===== */
+.end-round-emoji {
+  font-size: 56px;
+  margin: 20px 0;
+}
+
+.end-round-score {
+  font-size: 30px;
+}
+
+/* ===== ФИНАЛ ИГРЫ ===== */
+.final-emoji {
+  font-size: 80px;
+  margin: 20px 0;
+}
+
+.final-score {
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+
+.final-thanks {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* ===== ОБЩИЕ ===== */
+.text-center {
+  text-align: center;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+/* ===== АССИСТЕНТ (ИНТРО) ===== */
+.assistant-card {
+  margin: 10px 0;
+  padding: 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.9),
+    rgba(118, 75, 162, 0.9)
+  );
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.assistant-avatar {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.assistant-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.assistant-title {
+  color: white;
+  margin-bottom: 10px;
+  font-size: 26px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.assistant-info {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px 15px;
+  border-radius: 12px;
+  margin: 10px 0;
+}
+
+.assistant-subtitle {
+  font-size: 15px;
+  line-height: 1.4;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.assistant-list {
+  text-align: left;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 13px;
+  line-height: 1.6;
+  max-width: 450px;
+  margin: 0 auto;
+  padding-left: 20px;
+}
+
+/* ===== КНОПКА НАЧАТЬ КВИЗ ===== */
+.btn-start-quiz {
+  background: linear-gradient(45deg, #ff6b00, #ff8e00);
+  color: white;
+  border: none;
+  padding: 14px 35px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(255, 107, 0, 0.4);
+  transition: all 0.3s ease;
+  margin-top: 15px;
+}
+
+.btn-start-quiz:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(255, 107, 0, 0.6);
+}
+
+/* ===== ВЫБОР РАУНДА ===== */
+.round-selection-title {
+  color: #00d4ff;
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.round-selection-subtitle {
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 15px;
+}
+
+.round-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.round-card {
+  padding: 15px;
+  border-radius: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.round-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.round-card-emoji {
+  font-size: 35px;
+  margin-bottom: 8px;
+}
+
+.round-card-title {
+  color: white;
+  margin: 0 0 5px;
+  font-size: 17px;
+}
+
+.round-card-desc {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.3;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.round-card-badge {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4px 12px;
+  border-radius: 15px;
+  color: white;
+  font-size: 12px;
+}
+
+/* ===== СТАРТОВЫЙ ЭКРАН ===== */
+.start-title {
+  font-size: 52px !important;
+}
+
+.start-subtitle {
+  font-size: 22px !important;
+}
+
+.btn-start {
+  padding: 16px 55px !important;
+  width: 280px !important;
+  display: block !important;
+  margin: 0 auto !important;
+  font-size: 20px !important;
+  text-align: center !important;
+}
+
+/* Поле ввода: правильно/неправильно */
+.input-correct {
+  border-color: #2ed573 !important;
+  box-shadow: 0 0 20px rgba(46, 213, 115, 0.3) !important;
+}
+
+.input-wrong {
+  border-color: #ff4757 !important;
+  box-shadow: 0 0 20px rgba(255, 71, 87, 0.3) !important;
+}
+
+/* Метка прохода */
+.pass-label {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffd700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+/* Разбор ответов */
+.review-answer {
+  padding: 20px 25px;
+  border-radius: 16px;
+  margin: 15px 0;
+  text-align: left;
+}
+
+.review-correct {
+  background: rgba(46, 213, 115, 0.15);
+  border: 2px solid #2ed573;
+}
+
+.review-wrong {
+  background: rgba(255, 71, 87, 0.15);
+  border: 2px solid #ff4757;
+}
+
+.review-label {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.review-your {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #e0d5ff;
+}
+
+.review-correct-answer {
+  font-size: 20px;
+  color: #2ed573;
+  margin-bottom: 10px;
+}
+
+.review-explanation {
+  font-size: 18px;
+  color: #f0eaff;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.review-explanation-block {
+  margin-top: 15px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  font-size: 18px;
+  color: #f0eaff;
+  text-align: left;
+}
+
+/* ===== WORD-BUILD PROMPT (Многосложение) ===== */
+.word-build-prompt {
+  font-size: 42px;
+  text-align: center;
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  line-height: 1.4;
+}
+
+.word-build-prompt strong {
+  font-weight: 800;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Разделитель между словами — каждая строка отдельно */
+.word-build-prompt strong::after {
+  display: none;
+}

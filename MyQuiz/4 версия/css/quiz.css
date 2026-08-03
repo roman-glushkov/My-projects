@@ -1,0 +1,1169 @@
+/* ===== АНИМАЦИИ ===== */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== ИНТРО РАУНДА ===== */
+.intro-container {
+  text-align: center;
+  padding: 10px;
+}
+
+.intro-emoji {
+  font-size: 80px;
+  margin-bottom: 15px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.intro-round-number {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffd700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.intro-title {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.intro-info-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 30px 35px;
+  margin: 25px 0;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  display: inline-block;
+  text-align: left;
+}
+
+.intro-info-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.intro-info-icon {
+  font-size: 36px;
+}
+
+.intro-info-text {
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+}
+
+.intro-description {
+  font-size: 22px;
+  color: #e0d5ff;
+  max-width: 700px;
+  margin: 20px auto;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* ===== КНОПКИ ===== */
+.btn-start-round {
+  color: white;
+  border: none;
+  padding: 20px 60px;
+  border-radius: 60px;
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.btn-start-round:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+}
+
+.btn-check {
+  padding: 16px 40px;
+  width: 250px;
+  display: block;
+  margin: 0 auto;
+  font-size: 22px;
+  text-align: center;
+}
+
+.btn-next {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.btn-review {
+  font-size: 22px;
+  padding: 16px 40px;
+}
+
+/* ===== ТАЙМЕР ===== */
+.timer {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.timer-warning {
+  color: #ff4757;
+  animation: pulse 0.5s infinite;
+}
+
+.timer-normal {
+  color: #ffd700;
+}
+
+/* ===== ВОПРОС ===== */
+.question-text {
+  font-size: 34px !important;
+  margin-bottom: 30px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+/* ===== WORD-BUILD ===== */
+.word-build-prompt {
+  font-size: 52px !important;
+  text-align: center;
+  margin: 30px 0;
+}
+
+/* ===== ODD-ONE-OUT ===== */
+.odd-one-out-words {
+  font-size: 28px;
+  text-align: center;
+  margin: 25px 0;
+}
+
+/* ===== IMAGE-INPUT ===== */
+.image-input-img {
+  max-width: 100%;
+  max-height: 350px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== ПОЛЯ ВВОДА ===== */
+.input-answer {
+  font-size: 24px;
+  margin: 20px auto;
+  display: block;
+}
+
+/* ===== ОТВЕТЫ (text-choice) ===== */
+.answer-text {
+  font-size: 18px;
+  padding: 16px 18px;
+}
+
+.answer-letter {
+  color: #00d4ff;
+  font-size: 18px;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+/* ===== ПРОГРЕСС-БАР ===== */
+.score-text {
+  font-size: 22px;
+}
+
+/* ===== ОБЪЯСНЕНИЕ ===== */
+.explanation-text {
+  font-size: 20px;
+}
+
+/* ===== ФИНАЛ РАУНДА ===== */
+.end-round-emoji {
+  font-size: 56px;
+  margin: 20px 0;
+}
+
+.end-round-score {
+  font-size: 30px;
+}
+
+/* ===== ФИНАЛ ИГРЫ ===== */
+.final-emoji {
+  font-size: 80px;
+  margin: 20px 0;
+}
+
+.final-score {
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+
+.final-thanks {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* ===== ОБЩИЕ ===== */
+.text-center {
+  text-align: center;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+/* ===== АССИСТЕНТ (ИНТРО) ===== */
+.assistant-card {
+  margin: 10px 0;
+  padding: 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.9),
+    rgba(118, 75, 162, 0.9)
+  );
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.assistant-avatar {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.assistant-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.assistant-title {
+  color: white;
+  margin-bottom: 10px;
+  font-size: 26px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.assistant-info {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px 15px;
+  border-radius: 12px;
+  margin: 10px 0;
+}
+
+.assistant-subtitle {
+  font-size: 15px;
+  line-height: 1.4;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.assistant-list {
+  text-align: left;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 13px;
+  line-height: 1.6;
+  max-width: 450px;
+  margin: 0 auto;
+  padding-left: 20px;
+}
+
+/* ===== КНОПКА НАЧАТЬ КВИЗ ===== */
+.btn-start-quiz {
+  background: linear-gradient(45deg, #ff6b00, #ff8e00);
+  color: white;
+  border: none;
+  padding: 14px 35px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(255, 107, 0, 0.4);
+  transition: all 0.3s ease;
+  margin-top: 15px;
+}
+
+.btn-start-quiz:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(255, 107, 0, 0.6);
+}
+
+/* ===== ВЫБОР РАУНДА ===== */
+.round-selection-title {
+  color: #00d4ff;
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.round-selection-subtitle {
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 15px;
+}
+
+.round-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.round-card {
+  padding: 15px;
+  border-radius: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.round-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.round-card-emoji {
+  font-size: 35px;
+  margin-bottom: 8px;
+}
+
+.round-card-title {
+  color: white;
+  margin: 0 0 5px;
+  font-size: 17px;
+}
+
+.round-card-desc {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.3;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.round-card-badge {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4px 12px;
+  border-radius: 15px;
+  color: white;
+  font-size: 12px;
+}
+
+/* ===== СТАРТОВЫЙ ЭКРАН ===== */
+.start-title {
+  font-size: 52px !important;
+}
+
+.start-subtitle {
+  font-size: 22px !important;
+}
+
+.btn-start {
+  padding: 16px 55px !important;
+  width: 280px !important;
+  display: block !important;
+  margin: 0 auto !important;
+  font-size: 20px !important;
+  text-align: center !important;
+}
+
+/* Поле ввода: правильно/неправильно */
+.input-correct {
+  border-color: #2ed573 !important;
+  box-shadow: 0 0 20px rgba(46, 213, 115, 0.3) !important;
+}
+
+.input-wrong {
+  border-color: #ff4757 !important;
+  box-shadow: 0 0 20px rgba(255, 71, 87, 0.3) !important;
+}
+
+/* Метка прохода */
+.pass-label {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffd700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+/* Разбор ответов */
+.review-answer {
+  padding: 20px 25px;
+  border-radius: 16px;
+  margin: 15px 0;
+  text-align: left;
+}
+
+.review-correct {
+  background: rgba(46, 213, 115, 0.15);
+  border: 2px solid #2ed573;
+}
+
+.review-wrong {
+  background: rgba(255, 71, 87, 0.15);
+  border: 2px solid #ff4757;
+}
+
+.review-label {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.review-your {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #e0d5ff;
+}
+
+.review-correct-answer {
+  font-size: 20px;
+  color: #2ed573;
+  margin-bottom: 10px;
+}
+
+.review-explanation {
+  font-size: 18px;
+  color: #f0eaff;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.review-explanation-block {
+  margin-top: 15px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  font-size: 18px;
+  color: #f0eaff;
+  text-align: left;
+}
+
+/* ===== WORD-BUILD PROMPT (Многосложение) ===== */
+.word-build-prompt {
+  font-size: 42px;
+  text-align: center;
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  line-height: 1.4;
+}
+
+.word-build-prompt strong {
+  font-weight: 800;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Разделитель между словами — каждая строка отдельно */
+.word-build-prompt strong::after {
+  display: none;
+}
+
+/* Индивидуальный режим - ответы */
+.answer.selected {
+  border-color: #f5576c;
+  background: rgba(245, 87, 108, 0.2);
+  box-shadow: 0 0 20px rgba(245, 87, 108, 0.3);
+  transform: scale(1.02);
+}
+
+.answer.correct {
+  border-color: #4caf50;
+  background: rgba(76, 175, 80, 0.2);
+  box-shadow: 0 0 20px rgba(76, 175, 80, 0.3);
+}
+
+.answer.wrong {
+  border-color: #f44336;
+  background: rgba(244, 67, 54, 0.15);
+  opacity: 0.7;
+}
+
+.individual-result-block {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  animation: fadeIn 0.3s ease;
+}
+
+.result-icon {
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.correct-icon {
+  color: #4caf50;
+}
+
+.wrong-icon {
+  color: #f44336;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================================
+   ТУРНИРНЫЙ РЕЖИМ — НОВЫЙ ДИЗАЙН
+   ============================================================ */
+
+/* Контейнер турнирного режима — flex с таблицей слева */
+.tournament-layout {
+  display: flex;
+  gap: 20px;
+  height: 100%;
+  align-items: stretch;
+  flex: 1;
+  min-height: 0;
+}
+
+/* Левая панель — таблица участников (фиксированная) */
+.tournament-sidebar {
+  flex: 0 0 280px;
+  min-width: 200px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 16px;
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.tournament-sidebar-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  flex-shrink: 0;
+}
+
+.tournament-sidebar-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Строка участника в таблице */
+.tournament-player-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.tournament-player-row:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.tournament-player-row .rank {
+  font-size: 13px;
+  font-weight: 700;
+  color: #555;
+  width: 24px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.tournament-player-row .rank.gold {
+  color: #ffd700;
+}
+.tournament-player-row .rank.silver {
+  color: #c0c0c0;
+}
+.tournament-player-row .rank.bronze {
+  color: #cd7f32;
+}
+
+.tournament-player-row .emoji {
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.tournament-player-row .name {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tournament-player-row .stats {
+  display: flex;
+  gap: 6px;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.tournament-player-row .stats .correct {
+  color: #4caf50;
+}
+.tournament-player-row .stats .wrong {
+  color: #f44336;
+}
+
+.tournament-player-row .score {
+  font-size: 16px;
+  font-weight: 700;
+  min-width: 40px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* Правая панель — контент (вопрос + ответы) */
+.tournament-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.tournament-content .pass-label {
+  font-size: 13px;
+  color: #ffd700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+  flex-shrink: 0;
+}
+
+.tournament-content .question-text {
+  font-size: 24px !important;
+  margin-bottom: 14px;
+  flex-shrink: 0;
+}
+
+.tournament-content .image-input-img {
+  max-height: 200px;
+  margin-bottom: 12px;
+}
+
+.tournament-content .answers {
+  gap: 8px;
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+
+.tournament-content .answers .answer {
+  padding: 12px 14px;
+  font-size: 15px;
+  cursor: default;
+}
+
+.tournament-content .answers .answer:hover {
+  transform: none;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Правильный ответ подсвечивается после показа */
+.tournament-content .answers .answer.reveal-correct {
+  border-color: #4caf50;
+  background: rgba(76, 175, 80, 0.15);
+  box-shadow: 0 0 20px rgba(76, 175, 80, 0.2);
+}
+
+.tournament-content .answers .answer.reveal-wrong {
+  border-color: #f44336;
+  background: rgba(244, 67, 54, 0.1);
+}
+
+/* Кнопки управления */
+.tournament-controls {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 14px;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.tournament-controls .btn-reveal {
+  background: linear-gradient(45deg, #ff6b00, #ff8e00);
+  padding: 12px 32px;
+  font-size: 18px;
+}
+
+.tournament-controls .btn-reveal:hover {
+  background: linear-gradient(45deg, #ff8e00, #ffa500);
+}
+
+.tournament-controls .btn-next-tournament {
+  background: linear-gradient(45deg, #2ed573, #26de81);
+  padding: 12px 32px;
+  font-size: 18px;
+}
+
+.tournament-controls .btn-next-tournament:hover {
+  background: linear-gradient(45deg, #3ddf7a, #2ed573);
+}
+
+.tournament-controls .btn-next-tournament:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Прогресс-бар внутри контента */
+.tournament-content #progress-container {
+  margin: 10px 0 8px;
+}
+
+.tournament-content .score-text {
+  font-size: 16px;
+  margin-top: 4px;
+}
+
+/* Объяснение после показа ответа */
+.tournament-explanation {
+  margin-top: 12px;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border-left: 4px solid #ffd700;
+  flex-shrink: 0;
+  animation: fadeIn 0.3s ease;
+}
+
+.tournament-explanation p {
+  margin: 4px 0;
+  font-size: 15px;
+  color: #e0d5ff;
+}
+
+.tournament-explanation strong {
+  color: #ffd700;
+}
+
+/* ===== НАСТРОЙКА ТУРНИРА ===== */
+.tournament-setup-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.tournament-setup-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #f093fb, #f5576c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.tournament-setup-subtitle {
+  font-size: 1rem;
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+.tournament-players-list {
+  min-height: 60px;
+  margin-bottom: 15px;
+}
+
+.tournament-players-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.tournament-player-card {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.tournament-player-remove {
+  background: none;
+  border: none;
+  color: #f44336;
+  cursor: pointer;
+  font-size: 0.8rem;
+  opacity: 0.6;
+  padding: 0 4px;
+}
+
+.tournament-player-remove:hover {
+  opacity: 1;
+}
+
+.tournament-empty {
+  color: #666;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 20px;
+}
+
+.tournament-add-player {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.tournament-input {
+  padding: 10px 16px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-size: 0.95rem;
+  min-width: 150px;
+  outline: none;
+}
+
+.tournament-input:focus {
+  border-color: #f5576c;
+}
+
+.tournament-select {
+  padding: 10px 16px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-size: 0.95rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.tournament-select option {
+  background: #1a1a2e;
+}
+
+.tournament-color {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 2px;
+  cursor: pointer;
+  background: none;
+}
+
+.btn-add-player {
+  padding: 10px 24px;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+  color: #1a1a2e;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.btn-add-player:hover {
+  transform: scale(1.05);
+}
+
+.tournament-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.btn-reset-tournament {
+  padding: 10px 24px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  color: #aaa;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-reset-tournament:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+}
+
+/* ===== ИТОГОВАЯ ТАБЛИЦА ===== */
+.tournament-final-table {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 500px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tournament-final-table h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.tournament-final-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-bottom: 6px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* ===== АДАПТИВ ===== */
+@media (max-width: 900px) {
+  .tournament-layout {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .tournament-sidebar {
+    flex: 0 0 auto;
+    max-height: 160px;
+    min-width: unset;
+    padding: 10px 12px;
+  }
+
+  .tournament-sidebar-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-x: auto;
+    gap: 4px;
+    padding: 4px 0;
+  }
+
+  .tournament-player-row {
+    padding: 4px 8px;
+    font-size: 12px;
+    flex: 0 0 auto;
+  }
+
+  .tournament-player-row .emoji {
+    font-size: 18px;
+  }
+  .tournament-player-row .name {
+    font-size: 12px;
+  }
+  .tournament-player-row .score {
+    font-size: 14px;
+    min-width: 30px;
+  }
+  .tournament-player-row .stats {
+    font-size: 10px;
+  }
+  .tournament-player-row .rank {
+    font-size: 11px;
+    width: 18px;
+  }
+
+  .tournament-content .question-text {
+    font-size: 18px !important;
+  }
+  .tournament-content .answers .answer {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+  .tournament-controls .btn-reveal,
+  .tournament-controls .btn-next-tournament {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .tournament-sidebar {
+    max-height: 120px;
+  }
+  .tournament-player-row {
+    padding: 3px 6px;
+    font-size: 10px;
+  }
+  .tournament-player-row .emoji {
+    font-size: 14px;
+  }
+  .tournament-player-row .name {
+    font-size: 10px;
+  }
+  .tournament-player-row .score {
+    font-size: 12px;
+    min-width: 24px;
+  }
+  .tournament-content .question-text {
+    font-size: 15px !important;
+  }
+  .tournament-content .answers {
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+  .tournament-content .answers .answer {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+  .tournament-controls {
+    gap: 8px;
+  }
+  .tournament-controls .btn-reveal,
+  .tournament-controls .btn-next-tournament {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+}
+/* Кнопки действий в таблице турнира */
+.tournament-player-actions {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+}
+
+.tournament-player-actions .tournament-btn-correct,
+.tournament-player-actions .tournament-btn-wrong {
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.tournament-player-actions .tournament-btn-correct {
+  background: rgba(76, 175, 80, 0.2);
+  color: #4caf50;
+}
+
+.tournament-player-actions .tournament-btn-correct:hover {
+  background: rgba(76, 175, 80, 0.5);
+  transform: scale(1.15);
+}
+
+.tournament-player-actions .tournament-btn-wrong {
+  background: rgba(244, 67, 54, 0.2);
+  color: #f44336;
+}
+
+.tournament-player-actions .tournament-btn-wrong:hover {
+  background: rgba(244, 67, 54, 0.5);
+  transform: scale(1.15);
+}
+
+/* Обновлённый заголовок таблицы */
+.tournament-table-header {
+  display: grid;
+  grid-template-columns: 2fr 0.5fr 0.5fr 0.8fr 1fr;
+  padding: 8px 12px;
+  font-weight: 700;
+  color: #888;
+  font-size: 0.8rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 8px;
+}
+
+.tournament-table-row {
+  display: grid;
+  grid-template-columns: 2fr 0.5fr 0.5fr 0.8fr 1fr;
+  padding: 8px 12px;
+  align-items: center;
+  border-radius: 8px;
+  margin-bottom: 4px;
+  background: rgba(255, 255, 255, 0.03);
+  transition: background 0.2s;
+}
+
+/* Подсветка правильного ответа */
+.answer.reveal-correct {
+  border-color: #4caf50 !important;
+  background: rgba(76, 175, 80, 0.15) !important;
+  box-shadow: 0 0 20px rgba(76, 175, 80, 0.2);
+}
+
+.answer.reveal-wrong {
+  border-color: #f44336 !important;
+  background: rgba(244, 67, 54, 0.1) !important;
+  opacity: 0.7;
+}
